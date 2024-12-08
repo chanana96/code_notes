@@ -4,12 +4,12 @@ import { useForm, Controller, SubmitHandler } from 'react-hook-form';
 import Box from '@mui/material/Box';
 import { Button } from '@mui/material';
 import 'lib/userWorker';
-
+import { postSnippet } from 'config/axios';
 const defaultValue = ['function x() {', '\tconsole.log("Hello world!");', '}'].join('\n');
 
 export const Index = () => {
 	const { handleSubmit, control, reset } = useForm<any>({});
-	const onSubmit: SubmitHandler<any> = (data) => console.log(data);
+	const onSubmit: SubmitHandler<any> = async (data) => await postSnippet(data.editor);
 
 	return (
 		<Box

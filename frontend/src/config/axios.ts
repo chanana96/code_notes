@@ -1,19 +1,13 @@
 import axios from 'axios';
 
 export const api = axios.create({
-	baseURL: '/api',
+	baseURL: '/api/',
   });
 
-export const testAxiosGet = async () =>{
-	const res = await axios.get("/api/HelloWorld/Test")
-	return res
-}
-
-export const testAxiosPost = async () =>{
-	const res = await axios.post("/api/HelloWorld/PostTest",
+export const postSnippet = async (text: string) =>{
+	const res = await api.post("Upload/Snippet",
 		{
-			firstName:"first",
-			lastName: "name"
+			Text: text
 		}
 	)
 	return res

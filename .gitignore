@@ -1,0 +1,46 @@
+# Frontend (Node.js) ignores
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+frontend/*.local
+frontend/.vscode/*
+!frontend/.vscode/extensions.json
+
+# Frontend logs
+frontend/logs/
+frontend/*.log
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/pnpm-debug.log*
+
+# Backend (.NET) ignores
+backend/**/bin/
+backend/**/obj
+backend/**/*.user
+backend/.vs/
+backend/**/*.userosscache
+backend/**/*.sln.docstates
+
+# Build results
+backend/**/[Dd]ebug/
+backend/**/[Rr]elease/
+backend/**/x64/
+backend/**/x86/
+backend/**/[Aa][Rr][Mm]/
+backend/**/[Aa][Rr][Mm]64/
+backend/**/bld/
+
+.DS_Store
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.vscode/*
+!.vscode/extensions.json
+
+# Project specific
+*.http
+.github/copilot-instructions.md
